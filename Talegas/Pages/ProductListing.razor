@@ -1,0 +1,107 @@
+﻿@page "/catalog"
+@layout EmptyLayout
+@inject NavigationManager navManager
+
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<style>
+		body {
+			font-family: 'Poppins';
+			font-size: 20px;
+			color: #513322;
+		}
+
+		p {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="encabezado">
+		<div class="logoTalegas" @onclick="clickButtonToHome">Talegas</div>
+		<div class="navegador">
+			<ul>
+				<NavLink href="home" style="color: #513322"><li>Inicio</li></NavLink>
+				<NavLink href="catalog" style="color: #513322"><li>Catálogo</li></NavLink>
+				<NavLink href="" style="color: #513322"><li>Nosotros</li></NavLink>
+				<NavLink href="" style="color: #513322"><li>Contáctanos</li></NavLink>
+			</ul>
+		</div>
+		<div class="navUsuario">
+			<i class="fa-regular fa-heart fa-sm"></i>
+			<i class="fa-regular fa-user fa-sm"></i>
+			<i class="fa-solid fa-cart-shopping fa-sm"></i>
+		</div>
+	</div>
+
+	<div class="principalProductos">
+		<div class="filaProducto filaSuperiorProductos">
+			<div class="producto">
+				<img src="../images/producto1.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto2.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto3.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto4.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+		</div>
+		<div class="filaProducto filaInferiorProductos">
+			<div class="producto">
+				<img src="../images/producto5.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto6.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto7.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+			<div class="producto">
+				<img src="../images/producto8.png"/>
+				<div class="infoProducto">
+					<p class="tituloProducto">Talega playa</p>
+					<p class="precioProducto">$70.000</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+@code {
+	private void clickButtonToHome()
+	{
+		navManager.NavigateTo("/home");
+	}
+}

@@ -1,0 +1,56 @@
+﻿@using Talegas
+
+@layout EmptyLayout
+@inject HttpClient Http
+
+
+<style>
+    body {
+        background-color: grey;
+    }
+    .blazored-modal {
+        border-radius: 0;
+    }
+    .blazored-modal-header {
+    padding: 0px !important;
+    }
+
+
+</style>
+
+<div class="contenedor">
+    <div><h2 alt="Logo" class="modalLoginLogo">Talegas</h2></div>
+    <div id="titulo">Inicia sesión para continuar</div>
+    <div><input type="text" placeholder="Correo electrónico" @bind="correo"/></div>
+    <div><input type="password" placeholder="Contraseña" @bind="contraseña"/></div>
+
+    <button type="submit" @onclick="EnviarContraseña">Continuar</button>
+    <hr class="solid">
+
+    <div class="links">
+        <a href="/">He olvidado mi contraseña</a>
+        <a href="/">Crear una cuenta</a>
+    </div>
+</div> 
+
+@code {
+    private string correo = "";
+    private string contraseña = "";
+
+
+    private async Task  EnviarContraseña()
+    {
+        var loginObject = new LoginDto{email = correo, password = contraseña};
+
+        var respuesta = await Http.PostAsJsonAsync<LoginDto>( "login", loginObject);
+
+        var contenidos = await respuesta.Content.ReadFromJsonAsync<IEnumerable<LoginUser>>();
+
+        if (contenidos == null) return;
+
+        foreach(var contenido in contenidos)
+        {
+            System.Console.WriteLine(contenido.ToString());
+        }
+    }
+}

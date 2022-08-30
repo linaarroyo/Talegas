@@ -1,0 +1,76 @@
+﻿ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    margin-right: 30px;
+}
+
+button {
+    font-size: 18px;
+    width: 150px;
+    height: 45px;
+    border: none;
+    background: white;
+    color: #513322;
+}
+
+.encabezado {
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoTalegas {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.navegador {
+    padding: 20px 0;
+}
+
+.navUsuario {
+    padding: 20px 0;
+}
+
+.navUsuario i {
+    margin-left: 15px;
+}
+
+.filaProducto {
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegador li:hover {
+    color: #DBA269;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.navUsuario i:hover {
+    color: #DBA269;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.infoProducto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #916034;
+}
+
+.infoProducto .tituloProducto:hover {
+    color: #DBA269;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.producto img {
+    width: 300px;
+}

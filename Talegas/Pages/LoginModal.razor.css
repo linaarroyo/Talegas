@@ -1,0 +1,56 @@
+﻿
+.contenedor {
+    height: 360px;
+    width: 380px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+.modalLoginLogo {
+    font-size: 60px;
+    color: #513322;
+}
+
+#titulo {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #858585;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid #c2c2c2;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #513322;
+}
+
+input::active{
+    border: none;
+    outline:none;
+}
+
+
+input::placeholder {
+    color: #A9A9A9;
+}
+
+
+button {
+    border: none;
+    background-color: #D09A65;
+    font-size: 16px;
+    color: white;
+    width: 90%;
+    height: 40px;
+}
+
+.links a {
+    font-size: 14px;
+    color: #A0774E;
+    text-decoration: none;
+}
+
